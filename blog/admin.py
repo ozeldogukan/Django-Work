@@ -10,7 +10,7 @@ class BlogAdmin(admin.ModelAdmin):
     list_filter = ("is_active","is_home","categories",)
 
     def selected_categories(self, obj):
-        html = "<ul></ul>"
+        html = "<ul>"
         for category in obj.categories.all():
             html += "<li>" + category.name + "</li>"
         html += "</ul>"
